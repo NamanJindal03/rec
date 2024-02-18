@@ -13,3 +13,16 @@
     width: 150px;
     color: white;
 }
+.text-center{ /* reactstrap */
+    text-align: center;
+}
+.heading1{
+    font-size: 2.5rem;
+}
+.heading2{
+    font-size: 2rem;
+}
+.element-center{
+    display: flex;
+    justify-content: center;
+}
