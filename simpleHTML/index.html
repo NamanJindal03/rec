@@ -1,0 +1,20 @@
+<input type="text" value="naman">
+
+<script>
+    /* 
+        arr = [1,2,3,4,5]
+        obj = {name: 'naman', age: 10}
+    */
+    const newArr = [...arr];
+    // newArr[2] = 'abcd'; //way 1
+    const indexToBeUpdated = newArr.indexOf(3);
+    newArr[indexToBeUpdated] = 'abcd';
+    setArr(newArr);
+
+
+    const newObj = {...obj, age: 100};
+    setObj(newObj);
+
+    setObj({...obj, age:100})
+
+</script>
