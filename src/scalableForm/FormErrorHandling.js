@@ -7,6 +7,11 @@ export default function FormErrorHandling() {
                                         age: {value: "", error: ""},
                                         email: {value: "", error: ""},
                                     })
+
+    //  function handleValdiation(){
+    //     //handelfulname
+    //  }                               
+
     function submitForm(e){
 
         e.preventDefault();
@@ -20,6 +25,7 @@ export default function FormErrorHandling() {
         // }
 
         let isError = false;
+        
         if(formData.fullname.value.length < 3){
             isError = true;
             setFormData((prevState)=> ({
@@ -54,6 +60,10 @@ export default function FormErrorHandling() {
         //     email: "",
         //     age: ""
         // })
+    }
+    function sample(name, value){
+        //name === age && age <=18
+
     }
     function handleFormChange(e){
         const {name, value} = e.target;
