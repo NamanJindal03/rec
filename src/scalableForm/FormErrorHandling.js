@@ -3,13 +3,22 @@ import './style.css'
 
 export default function FormErrorHandling() {
     const [formData, setFormData] = useState({
-                                        fullname: {value: "", error: "The name cannot be empty"},
+                                        fullname: {value: "", error: ""},
                                         age: {value: "", error: ""},
                                         email: {value: "", error: ""},
                                     })
     function submitForm(e){
 
         e.preventDefault();
+        // const isErrorAlreadyExist = Object.keys(formData).filter((key)=>{
+        //     return formData[key].error
+        // })
+        // console.log(isErrorAlreadyExist);
+        // if(isErrorAlreadyExist.length ){
+        //     console.log('you havent fixxed')
+        //     return;
+        // }
+
         let isError = false;
         if(formData.fullname.value.length < 3){
             isError = true;
@@ -49,6 +58,9 @@ export default function FormErrorHandling() {
     function handleFormChange(e){
         const {name, value} = e.target;
         /*  */
+        if(name == 'age'){
+            //handle the ongoing validation
+        }
         console.log('name field -> the form', name);
         console.log('value field -> the form', value);
         console.log('existing form data', formData);
