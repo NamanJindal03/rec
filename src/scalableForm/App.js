@@ -7,6 +7,7 @@ export default function App() {
                                         email: ''
                                     })
     
+    
     function handleNameChange(e){
         // setFormData((prevState) =>{ return {...prevState, name: e.target.value}})
         setFormData({...formData, name: e.target.value})
@@ -21,10 +22,8 @@ export default function App() {
         setFormData({...formData, email: e.target.value})
 
     }
-    function handleFormChange(e){
-        const {name, value} = e.target;
-        setFormData((prevState) => ({...prevState, [name]: value}))
-    }
+   
+    
     function submitForm(e){
         e.preventDefault();
         console.log(formData); //submit it to an API
@@ -35,12 +34,22 @@ export default function App() {
             age: ""
         })
     }
+    function handleFormChange(e){
+        const {name, value} = e.target;
+        setFormData({...formData, [name]: value})
+    }
   return (
     <>
         <form action="" onSubmit={submitForm}>
-            Name: <input type="text" value={formData.name} onChange={handleFormChange} name="name"/>
-            Age: <input type="number" value={formData.age} onChange={handleFormChange} name="age"/>
-            Email: <input type="text" value={formData.email} onChange={handleFormChange} name="email"/>
+            <div>
+                Name: <input type="text" value={formData.name} onChange={handleFormChange} name="name"/>
+            </div>
+            <div>
+                Age: <input type="number" value={formData.age} onChange={handleFormChange} name="age"/>
+            </div>
+            <div>
+                Email: <input type="text" value={formData.email} onChange={handleFormChange} name="email"/>
+            </div>
             <button  type='submit'>Submit</button>
         </form>
     </>

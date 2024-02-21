@@ -8,12 +8,12 @@ import ReactDOM from 'react-dom/client';
 // import App from './tictactoe/App'
 // import App from './batching/App'
 // import App  from './controlled/App'
-import App from './scalableForm/App'
+import FormErrorHandling from './scalableForm/FormErrorHandling'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <App />
+    <FormErrorHandling />
   // </React.StrictMode>
 );
 
