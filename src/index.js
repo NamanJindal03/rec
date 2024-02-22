@@ -9,12 +9,13 @@ import ReactDOM from 'react-dom/client';
 // import App from './batching/App'
 // import App  from './controlled/App'
 // import FormErrorHandling from './scalableForm/FormErrorHandling'
-import GrandFather from './UpliftState/GrandFather';
+// import GrandFather from './UpliftState/GrandFather';
+import App from './unmount/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <GrandFather />
+    <App />
   // </React.StrictMode>
 );
 

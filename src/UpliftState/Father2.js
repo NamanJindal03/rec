@@ -10,6 +10,7 @@ export default function Father2({counter, updateCounter}) {
         <input 
             type="number" 
             onChange={(e)=>setTempCounter(e.target.value)}
+            // onChange={(e) => updateCounter(e.target.value)}
         />
         <button 
             onClick={()=> updateCounter(tempCounter)}>
