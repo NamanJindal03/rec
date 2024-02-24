@@ -508,9 +508,8 @@ Summary:
 		Handled Scalability of controlled componetn forms (States and functions)
 
 Tomorrows: 
-	1) Error Handling in forms
-	2) Inclass questions
-	3) SideEffects 
+	1) Error Handling in forms - complete -> 
+
 
 1) Rewatch lecture -
 2) Code the same thing that we did in the lecture on your own -> 
@@ -519,3 +518,105 @@ Tomorrows:
 
 
 **Extra efforts -> study the library formik -> 
+
+There are 2 more ways to handle the form -> 
+1) ref -> (we would be studying soon in the normal lectures)
+2) new formData -> (this is an extra part -> tb covered in I2)
+
+Today's Lecture -> 22/02/24
+	1) Lifting the state
+	2) SideEffects 
+	3) -> useEffect
+
+The component where the states resides (lives or initated) only at that place the state should be ideally changed.
+
+REact Lifecycle (Simple) -> complex will be done later
+1) Initialisation 
+2) Mounting
+3) Update (updatation)
+4) Unmounting 
+
+what can be the possible condition in
+which this card gets removed (unmounted)
+
+React Hooks (Functional components of react )
+
+1) HOOK -> useEffect hook -> 
+
+mounted function ->
+updated funcntion ->
+unmounted function ->
+
+
+beforeMount(){
+	console.log('I want to handle something before mounting')
+}
+beforeUpdate(){}
+onUnmount()
+
+Summary ->
+	Lifting the state -> where we convered how react unidirectional property forces to to lift the state
+
+	hacky way of passing the data from a child component to parent component -> define a funciton the parent level, pass it as a prop to the child level and then pass the data from the child level by calling the funciton and we got the data from child in parent. 
+
+	side effects 
+
+	useEffect and a mini syntax of it
+
+
+Tomorrow ->
+why we need these lifecycle methods
+when do we use them
+how to handle the update
+what is the depenedency array
+
+
+revise -> 
+doubts???
+useEffect ->
+few mini questions on that
+assignemtn -> 
+inclasss and post class -> 
+
+
+make a polyfill of maps -> 
+
+1) the actual function you have study its own functioanlity
+2) try to replicate those functioanlity as if the funciton is not present ewith you
+
+const arr = [1,2,3,4,5,6];
+const newArr = arr.map((value, index, completeArr)=>{
+	return value+index;
+})
+
+Array.prototype.myMap = function(cb){
+	const newArr =[];
+	for(let i=0; this.length; i++){
+		const returnedValue = cb(this[i], i, this);
+		newArr.push(returnedValue);
+		//newArr.push(cb(this[i], i, this));
+	}
+	return newArr;
+}
+
+3 situations of dependency array
+1) dependency array not present at all 
+	A) We should never have something like this 
+	B) A situation like this triggers your useEffect on both mounted and updated
+	C) It can go pretty uncontrollable hence we avoid using it
+
+2) dependency array present but blank
+	A) This is what we use specifically for mounted state 
+
+3) dependency array with certain states in them 
+	A) This also gets triggered on mounted
+	B) This gets triggered on updated only if the states which are passed as a dependency array changes
+
+Question -> 
+	Make a heirarchy 
+		Parent 
+			Child1
+			Child2
+
+1) when child1 mounts child2 should unmount (Prove with valid console.log)
+2) on each update on the parent -> log i am updated
