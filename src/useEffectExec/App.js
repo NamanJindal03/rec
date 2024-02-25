@@ -35,7 +35,3 @@ function Child2(){
         </>
     )
 }
-<div style={{height: displayedBoxProperties.height,
-           width: displayedBoxProperties.width, 
-           backgroundColor: displayedBoxProperties.backgroundColor
-           }}> </div>

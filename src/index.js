@@ -12,7 +12,8 @@ import ReactDOM from 'react-dom/client';
 // import GrandFather from './UpliftState/GrandFather';
 // import App from './unmount/App'
 // import App from './test1/App'
-import App from './useEffectExec/App'
+// import App from './useEffectExec/App'
+import App from './todoProject/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
