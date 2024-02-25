@@ -1,10 +1,15 @@
 import React from 'react'
 import TodoItem from './TodoItem'
 
-export default function TodoDisplay() {
+export default function TodoDisplay({todoList, toggleCompleted,deleteTodo}) {
   return (
     <>
-        <TodoItem />
+        {
+            todoList.map((todo)=>{
+                return <TodoItem todo={todo} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo}/>
+            })
+            
+        }
     </>
   )
 }

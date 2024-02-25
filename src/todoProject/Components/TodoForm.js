@@ -23,6 +23,7 @@ export default function TodoForm({addTodo}) {
                 type="text" 
                 value={todoString} 
                 onChange={(e)=> setTodoString(e.target.value)}
+                placeholder='Todo Item'
             />
             <button onClick={handleAddTodo} type='submit'>Add Todo</button>
         </form>
