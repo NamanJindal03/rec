@@ -16,7 +16,7 @@ export default function App() {
 function Child1(){
     useEffect(()=>{
         console.log('I am child 1 and I am mounted');
-        return () => {return console.log('Alas child 1 had to be destroyed')}
+        return () => console.log('Alas child 1 had to be destroyed')
     }, [])
     return (
         <>
@@ -35,3 +35,7 @@ function Child2(){
         </>
     )
 }
+<div style={{height: displayedBoxProperties.height,
+           width: displayedBoxProperties.width, 
+           backgroundColor: displayedBoxProperties.backgroundColor
+           }}> </div>
