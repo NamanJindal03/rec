@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { v4 as uuidv4 } from 'uuid';
+import { v4  } from 'uuid';
 
 export default function TodoForm({addTodo}) {
     const [todoString, setTodoString] = useState("");
@@ -11,7 +11,7 @@ export default function TodoForm({addTodo}) {
         const todo = {
             value: todoString,
             isCompleted: false,
-            id: uuidv4()
+            id: v4()
         }
         addTodo(todo)
         setTodoString("");

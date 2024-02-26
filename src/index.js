@@ -13,7 +13,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './unmount/App'
 // import App from './test1/App'
 // import App from './useEffectExec/App'
-import App from './todoProject/App'
+// import App from './todoProject/App'
+import App from './apiCall/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
