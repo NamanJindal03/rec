@@ -14,12 +14,12 @@ import ReactDOM from 'react-dom/client';
 // import App from './test1/App'
 // import App from './useEffectExec/App'
 // import App from './todoProject/App'
-import App from './apiCall/App'
+import App2 from './apiCall/App2'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <App />
+    <App2 />
   // </React.StrictMode>
 );
 
