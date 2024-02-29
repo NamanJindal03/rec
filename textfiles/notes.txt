@@ -612,6 +612,17 @@ Array.prototype.myMap = function(cb){
 	A) This also gets triggered on mounted
 	B) This gets triggered on updated only if the states which are passed as a dependency array changes
 
+1) API Calls
+2) Cleaning event listeners -> window.removeEventListener (unmount)
+	useEffect(() => {
+	   window.addEventListener('click', handleClick);
+	   return () => {
+	       window.removeEventListener('click', handleClick)
+	   }
+	}, [])
+3) setTimeout
+4) setInterval and many more tht we will see
+
 Question -> 
 	Make a heirarchy 
 		Parent 
@@ -634,7 +645,7 @@ Concepts ->
 
 
 App.js (parent)
-	<h1> 
+	<h1>  (this is not a componet)
 	<TodoForm /> 
 			(Form Tag or you can direclty use a input and button)
 
@@ -644,3 +655,131 @@ App.js (parent)
 
 ** special -> save and retrive todos -> on refresh -> the same items should appear
 	Hint -> use local storage alogn with useEffect 
+
+Action Plan for TODO
+1) Those who were able to complete do nothing -> review the code and compare
+2) those who completed but not did separate the todoForm and todoDisplay(did not use the state uplifment), recode and acheive state upliftment
+3) those who couldnt complete complete, code it and then review. dont see the solution, dont rewatchh the video. first code if get stuck then rewatch video and recode.
+
+
+
+
+Fetch -> entire study
+calling an api in react 
+
+
+Call the API ->
+https://jsonplaceholder.typicode.com/posts/1/comments
+
+Display the first 2 content ->
+The body, email, name in terms of a CARD.
+
+27th Feb
+1) Make a loader
+2) In class assignemt
+3) different methods present and what they mean
+3) Make a post api call
+4) Project 
+
+api delay -> time it takes
+1) Client machine 
+2) Server Response time -> in terms of computing that API (interacting with the database, formating the response etc etc)
+3) Network delay /network congestion
+4) client internet speed 
+
+Mini todos
+1) Code writing and using vs code key shortcuts
+2) Digital note making 
+3) --save (why? and do we really need it now?)
+
+
+REST -> a preferred way of writing the api ->
+
+certain guidelines (optional) -> each and every developer follow -> 
+
+1) Methods ->
+	Action keywords -> 
+		1) Get ->>>>>>>>>>>> you need to get some data from the server end
+			path params, and query params ->
+		2) post -> you need to send some data to the server end, over here the server can also send you something back
+		3) put
+		4) delete
+		5) patch
+
+API call ->
+	2 parts -> 
+		1) method
+		2) end point
+
+	Both of them together make an API unique ->
+		https://api.user.me -> GET -> BE responds -> list of users
+		https://api.user.me -> POST -> user added succesfully 
+
+	BE -> handles both the sitatuation uniquelly
+
+
+closure 
+
+function outer(){
+	let a = 10;
+	return function inner(){
+		console.log(a);
+	}
+}
+const innerFunc = outer()
+innerFunc();
+
+
+
+
+Pokemon Project ->
+1) Pagination api -> what is it? why do we use it?
+2) Creating a modal -> in react -> 
+
+
+Query Param ->
+https://facebook.com/?search='abcd'
+https://facebook.com/?page_no='1'&page_size="20"
+
+Path Params -> 
+Api contracts -> 
+
+BE -> https://facebook.com/profile/:id 
+
+https://facebook.com/profile/abcd
+https://facebook.com/profile/10
+https://facebook.com/profile/abcd1112232232
+
+
+Normal -> https://airbnb.com/listings
+
+post/1/comment/3
+
+pokemon -> 
+1) Understanding API and writing the code for them
+
+
+App.js (Parent componet)
+	H1 (not component)
+	Pokemon Container (Component)
+		Card (Component)
+			serial no (no)
+			image (no)
+			heading (no)
+			type (no)
+			button (no)
+	Modal (componet)
+		(all no component)
+		image and name
+		stats
+		close button
+
+styles and optimization and fixing bugs
+
+1st round 
+DSA -> 90% DSA ->
+HTML
+CSS
+JS -> 80
+React
+Node
