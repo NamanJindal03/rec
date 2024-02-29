@@ -1,8 +1,15 @@
 import React, {useState, useEffect} from 'react'
+import PokemonContainer from './components/PokemonContainer';
+import './style.css'
 
 export default function App() {
     const [pokemons, setPokemons] = useState([]);
     const [currentPokemonAPI, setCurrentPokemonAPI] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1");
+    const [selectPokemonInModal, setSelectedPokemonInModal] = useState("");
+
+    function assignPokemonToModal(){
+
+    }
     async function getPokemonData(){
         //handle negative cases first -> this makes your code very clean
         if(!currentPokemonAPI){
@@ -17,19 +24,38 @@ export default function App() {
             console.log(pokemonData);
             console.log(pokemonData[0].results);
             setCurrentPokemonAPI(pokemonData[0]?.next ? pokemonData[0]?.next : null)
-            setPokemons((prev)=> [...prev, ...pokemonData[0].results])
+            const apiArray = pokemonData[0].results.map((pokemon)=>{
+                return fetch(pokemon.url)
+            })
+            console.log(apiArray);
+            const pokemonStatsResponse = await Promise.all(apiArray);
+            const pokemonStatsJsonPromises = pokemonStatsResponse.map((soloApiResponse)=>{
+                // if(!soloApiResponse.ok){
+                //     throw new Error("Something went wrong")
+                // }
+                return soloApiResponse.json();
+            })
+            console.log(pokemonStatsJsonPromises)
+            const pokemonStats = await Promise.all(pokemonStatsJsonPromises);
+            const formatedPokemonStats = pokemonStats.map((pokemonStat)=>{
+                return pokemonStat[0]
+            })
+            console.log(formatedPokemonStats);
+            setPokemons((prev)=> [...prev, ...formatedPokemonStats])
 
         }
         catch(err){
-            console.err(err)
+            console.error(err)
         }
     }
     useEffect(()=>{
         getPokemonData()
     },[])
   return (
-    <>
+    <div className='container'>
+        <h1>Pokemon Kingdom</h1>
+        <PokemonContainer pokemons={pokemons} assignPokemonToModal={assignPokemonToModal}/>
         {currentPokemonAPI ? <button onClick={getPokemonData}>More Pokemons</button> : null}
-    </>
+    </div>
   )
 }
