@@ -12,6 +12,9 @@ export default function App() {
     function assignPokemonToModal(assignedPokemon){
         setSelectedPokemonInModal(assignedPokemon);
     }
+    function closeModal(){
+        setSelectedPokemonInModal("")
+    }
     async function getPokemonData(){
         //handle negative cases first -> this makes your code very clean
         if(!currentPokemonAPI){
@@ -57,7 +60,7 @@ export default function App() {
     },[])
   return (
     <div className='container'>
-        {selectPokemonInModal ? <PokemonModal pokemonData={selectPokemonInModal}/> : null}
+        {selectPokemonInModal ? <PokemonModal pokemonData={selectPokemonInModal} closeModal={closeModal}/> : null}
 
         <h1>Pokemon Kingdom</h1>
         {!isLoading ? <PokemonContainer pokemons={pokemons} assignPokemonToModal={assignPokemonToModal}/> : 'Loading....'}
