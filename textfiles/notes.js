@@ -757,6 +757,7 @@ post/1/comment/3
 
 pokemon -> 
 1) Understanding API and writing the code for them
+2) Handled nested API and promise.all, covered the data flow
 
 
 App.js (Parent componet)
@@ -783,3 +784,74 @@ CSS
 JS -> 80
 React
 Node
+
+Agenda -> 2nd March 
+1) Making modal
+2) Styling the componts
+
+React.portals -> 
+
+1) doubts
+2) Assignemnts
+3) few functionalities on pokemon project
+4) tic tac toe -> library integrations
+
+// <p classname={isError ? 'error': 'success'}>{eError}</p>
+
+
+1) Doubts
+2) Trivia Question
+3) Tic tac toe -> integrating toast 
+	A) Read the documentation of toastify  -> npm package -> documenation
+	B) Impletment the same
+
+useEffect(() => {
+    fetch("https://content.newtonschool.co/v1/pr/64a277bd01d4ee34c6074e33/moviesList")
+      .then(response => response.json())
+      .then(d => setData(d))
+  }, [])
+
+
+short circuit 
+
+false && <component>
+
+3rd March ->
+assigments ->
+pokemon -> modal 
+npm libraries -> 
+
+function foo(){
+	function bar(){
+		return 3;
+	}
+	return bar();
+	function bar(){
+		return 8;
+	}
+}
+console.log(foo())
+
+var x = 10;
+function test(){
+	if(x > 20){
+		var x = 50;
+	}
+	console.log(x)
+}
+test()
+
+undefined -> 
+
+Toast ->
+
+reactstrap ->  tic tac toe 
+
+ReactDOM.createPortal(
+	<div>
+
+	<div/>,
+	document.getElementById('portal')
+)
+
+proof of concept
