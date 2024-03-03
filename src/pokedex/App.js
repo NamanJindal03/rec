@@ -6,7 +6,7 @@ import PokemonModal from './components/PokemonModal';
 export default function App() {
     const [pokemons, setPokemons] = useState([]);
     const [currentPokemonAPI, setCurrentPokemonAPI] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1");
-    const [selectPokemonInModal, setSelectedPokemonInModal] = useState("");
+    const [selectPokemonInModal, setSelectedPokemonInModal] = useState(null);
     const [isLoading, setIsLoading] = useState(true)
 
     function assignPokemonToModal(assignedPokemon){
@@ -57,11 +57,12 @@ export default function App() {
     },[])
   return (
     <div className='container'>
+        {selectPokemonInModal ? <PokemonModal pokemonData={selectPokemonInModal}/> : null}
+
         <h1>Pokemon Kingdom</h1>
         {!isLoading ? <PokemonContainer pokemons={pokemons} assignPokemonToModal={assignPokemonToModal}/> : 'Loading....'}
         {!isLoading && currentPokemonAPI ? <button onClick={getPokemonData}>More Pokemons</button> : null}
 
-        {selectPokemonInModal ? <PokemonModal pokemonData={selectPokemonInModal}/> : null}
     </div>
   )
 }
