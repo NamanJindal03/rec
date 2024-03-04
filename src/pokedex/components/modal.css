@@ -10,8 +10,45 @@
     background-color:rgb(0,0,0,0.5);
 }
 .content{
-    background-color: white;
     height: 40%;
     width: 60%;
     z-index: 11;
+    padding: 2rem 2rem 2rem 4rem;
+    justify-content: space-between;
+    position: relative;
+}
+.content .pokemonDisplay{
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.pokemonImageContainer{
+    height: 200px;
+    width:200px;
+}
+.pokemonImageContainer img{
+    max-width: 100%;
+    max-height: 100%;
+    height: 200px;
+}
+
+.pokemonName{
+    text-decoration: underline;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+.pokemonStats{
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+}
+.modalBtn{
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 1px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }

@@ -18,6 +18,10 @@ body{
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.25);
 }
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
 /*---------------------------------- 
     Pokemon background gradients 
 ------------------------------------*/
