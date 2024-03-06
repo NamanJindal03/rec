@@ -855,3 +855,56 @@ ReactDOM.createPortal(
 )
 
 proof of concept
+
+Things remaining
+1) Heading -> can take time
+2) More pokemons button
+3) Pokemon card hover effects (transforms)
+4) Know more button hover effect 
+5) the id to have a circle 
+6) minor changes in the modal
+
+Positions
+box modal
+symbols
+flex grids 
+
+
+Class Based Components 
+
+1) Are we still using class based components
+yes and no, the companies which are operating on legacy code whom havent moved to function based component. 
+Whenever oyu will be creating a component that will alwyas be a function based component.
+
+2) why do we need to study class based components
+A) Interviews 
+B) Company who is transitioning from class based to funciton component
+C) not that much relevant today. 8 months. to understand certain documentation there is chnaces that the code might be in class based component hence you should be ware of the smae. 
+
+SUnday morning sess-> 1:30 - 4 -> 
+	Rules -> Mike (least), video
+	stage -> kick -> 
+Array
+Objects
+Event Loop
+Hoisting
+Scoping
+Closure
+
+nullish collessaing -> ??
+optional chaining -> ?
+retry logics -> 
+shimmer -> UI/UX -> 
+
+
+import abcdLogo from '../assetts/svg/abcd'
+
+client side rendering 
+
+very bad for SEO ->
+	SEO -> web crawlers(spiders) -> html -> JS -> 
+
+server side rendering
+
+Tomorrow -> 
+React Router
