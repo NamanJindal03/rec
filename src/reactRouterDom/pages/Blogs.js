@@ -3,11 +3,11 @@ import { useParams, Link } from 'react-router-dom'
 
 export default function Blogs() {
     const params = useParams();
-    console.log(params);
+    // console.log(params);
     useEffect(()=>{
         //make your api call
         console.log(params.id)
-    }, [])
+    }, [params.id])
   return (
     <>
         <div style={{display: 'flex', gap:'10px'}}>

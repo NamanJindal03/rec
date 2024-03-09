@@ -908,3 +908,27 @@ server side rendering
 
 Tomorrow -> 
 React Router
+
+
+React Router
+Component APproach -> (Newton school assignemnt ) (Compartively old)
+API basedd approach -> new
+
+React Router always use BrowserRouter ->
+
+/blogs and /blogs/:id are different things
+
+1) doubts
+2) few questions relaated to useEffect and setInterval and setTimeout
+
+	Parent -> app.js -> button to mount and unmount stopwatch component
+	Child -> stopwatch ->
+		mount -> it should automatically start decreasing itself from count 10 and it should stop at 0.
+		A) to solve it using setTimeout
+		B) solve using setInterval and this time I dont want the timer to stop at 0, but if the component mounts and then unmount and yet again mounts again. (mounted again) -> then it should start from 10 itself. 
+		C) setInterval stopping at 0. I dont want my interval to be running at that point of time.
+
+
+3) TodoList -> localstorage (Local storage)
+4) Tic Tac Toe -> integrating more librarires
+5) Machine code question on react -> 

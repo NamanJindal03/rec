@@ -9,6 +9,7 @@ export default function Home() {
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
             <Link to="http://www.google.com">Google</Link>
+            <Link to="/blogs">Blog 2</Link>
         </div>
 
         {/* 
