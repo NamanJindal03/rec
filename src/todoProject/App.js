@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import TodoForm from './Components/TodoForm'
 import TodoDisplay from './Components/TodoDisplay'
 import './style.css'
@@ -6,7 +6,7 @@ import './style.css'
 export default function App() {
     const [todoList, setTodoList] = useState([]);
     function addTodo(todo){
-        setTodoList([...todoList, todo])
+        setTodoList([...todoList, todo]);
     }
     function toggleCompleted(todoId){
         const updatedTodo = todoList.map((todo)=>{
@@ -23,6 +23,15 @@ export default function App() {
         })
         setTodoList(updatedTodo)
     }
+    useEffect(()=>{
+        const localTodos = localStorage.getItem("todos");
+        if(localTodos){
+            setTodoList(JSON.parse(localTodos));
+        }
+    },[])
+    useEffect(()=>{
+       localStorage.setItem('todos', JSON.stringify(todoList))
+    }, [todoList])
   return (
     <>
         <h1>Todo Application</h1>
