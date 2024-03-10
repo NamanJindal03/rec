@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Blogs from './pages/Blogs';
 import StopwatchParent from './pages/stopwatch/StopwatchParent';
+import Crypto from './pages/crypto_proj/App'
 
 export default function App() {
   return (
@@ -18,7 +19,9 @@ export default function App() {
             <Route path='/blogs/:id' element={<Blogs />} />
             <Route path='/blogs' element={<Blogs />} />
             <Route path='/stopwatch' element={<StopwatchParent/>}/>
+            <Route path='/crypto' element={<Crypto/>}/>
             <Route path='*' element={<NotFound />} />
+            
 
         </Routes>
     </>
