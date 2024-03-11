@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound'
 import Blogs from './pages/Blogs';
 import StopwatchParent from './pages/stopwatch/StopwatchParent';
 import Crypto from './pages/crypto_proj/App'
+import Temp from './pages/Temp';
 
 export default function App() {
   return (
@@ -16,8 +17,14 @@ export default function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<div>This is new baout </div>}/>
             <Route path='/contact' element={<Contact/>}/>
-            <Route path='/blogs/:id' element={<Blogs />} />
-            <Route path='/blogs' element={<Blogs />} />
+
+            <Route path='/blogs' >
+              <Route index element={<Temp />}/>
+              <Route path=':id' element={<Blogs />} />
+              {/* <Route   /> */}
+              <Route path='category/:categoryId' element={<Blogs />} />
+            </Route>
+
             <Route path='/stopwatch' element={<StopwatchParent/>}/>
             <Route path='/crypto' element={<Crypto/>}/>
             <Route path='*' element={<NotFound />} />
