@@ -5,10 +5,11 @@ import Home from './pages/Home';
 import About from './pages/About'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
-import Blogs from './pages/Blogs';
+import IndividualBlogs from './pages/IndividualBlogs';
 import StopwatchParent from './pages/stopwatch/StopwatchParent';
 import Crypto from './pages/crypto_proj/App'
-import Temp from './pages/Temp';
+import BlogsHome from './pages/BlogsHome';
+import BlogLayout from './BlogLayout';
 
 export default function App() {
   return (
@@ -18,11 +19,11 @@ export default function App() {
             <Route path='/about' element={<div>This is new baout </div>}/>
             <Route path='/contact' element={<Contact/>}/>
 
-            <Route path='/blogs' >
-              <Route index element={<Temp />}/>
-              <Route path=':id' element={<Blogs />} />
+            <Route path='/blogs' element={<BlogLayout/>}>
+              <Route index element={<BlogsHome />}/>
+              <Route path=':id' element={<IndividualBlogs />} />
               {/* <Route   /> */}
-              <Route path='category/:categoryId' element={<Blogs />} />
+              <Route path='category/:categoryId' element={<IndividualBlogs />} />
             </Route>
 
             <Route path='/stopwatch' element={<StopwatchParent/>}/>
