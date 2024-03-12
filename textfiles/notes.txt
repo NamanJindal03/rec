@@ -932,3 +932,44 @@ React Router always use BrowserRouter ->
 3) TodoList -> localstorage (Local storage)
 4) Tic Tac Toe -> integrating more librarires
 5) Machine code question on react -> 
+
+
+useRef vs useState (very very important interview and normally)
+1) useRef doesnt trigger a rerender
+
+why we have useRef -> to be covered later
+another important point about useRef is it doesnt loose its value just like useState and hence has a better usecase than a normal js variable
+
+1) https://api.frontendexpert.io/api/fe/cryptocurrencies
+
+Cross Origin Resource Sharing -> *** interview + development
+
+Different Resource means 
+1) differnet domain
+2) different subdomain
+3) different protocol
+4) different port
+
+
+
+
+TASKS For me
+fetch(
+	`https://api.frontendexpert.io/api/fe/cryptocurrencies/?page=${page}`,
+	{
+		mode: "cors",
+	}
+)
+
+event loop article -> https://javascript.info/event-loop
+
+
+
+Layout, Outlet, Nesting
+
+Exercise ->
+On NotFound -> redirect the user to the home page automatically after x seconds. 
+
+1) How to set search param from the UI
+2) Difference between search param and path param concentrating on when to use what
+3) useQueryParam

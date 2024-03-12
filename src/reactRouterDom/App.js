@@ -10,6 +10,7 @@ import StopwatchParent from './pages/stopwatch/StopwatchParent';
 import Crypto from './pages/crypto_proj/App'
 import BlogsHome from './pages/BlogsHome';
 import BlogLayout from './BlogLayout';
+import ConceptSearch from './pages/ConceptSearch';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
 
             <Route path='/stopwatch' element={<StopwatchParent/>}/>
             <Route path='/crypto' element={<Crypto/>}/>
+            <Route path='/concept-search' element={<ConceptSearch/>}/>
             <Route path='*' element={<NotFound />} />
             
 
