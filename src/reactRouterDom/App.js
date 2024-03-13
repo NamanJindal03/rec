@@ -28,10 +28,12 @@ export default function App() {
               {/* <Route   /> */}
               <Route path='category/:categoryId' element={<IndividualBlogs />} />
             </Route>
+            
+            <Route path='/concept-search' element={<ConceptSearch/>}/>
+
 
             <Route path='/stopwatch' element={<StopwatchParent/>}/>
             <Route path='/crypto' element={<Crypto/>}/>
-            <Route path='/concept-search' element={<ConceptSearch/>}/>
             <Route path='*' element={<NotFound />} />
             
 
