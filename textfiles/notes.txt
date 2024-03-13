@@ -970,6 +970,89 @@ Layout, Outlet, Nesting
 Exercise ->
 On NotFound -> redirect the user to the home page automatically after x seconds. 
 
+Navigate -> 
+	<Navigate /> ->
+	useNavigate hook -> 
+		Notfound ->
+
+	state inside your navigate, link, navlink
+
+	useLocation hook -> state, a lot more informaiton about the url
+
+	useSearchParams -> 
+
 1) How to set search param from the UI
-2) Difference between search param and path param concentrating on when to use what
-3) useQueryParam
+2) Difference between query param and path param concentrating on when to use what
+
+search param -> 
+	filtering the content ->
+		existing database (100 products)
+		search -> laptop -> 20 products (like to be related to laptop)
+
+		domain?search='laptop'
+
+
+		{value} ->
+		4 radio buttons -> 
+			Goku -> display names
+			Vegeta
+			Picolo
+			Gohan
+		value -> 
+
+		refresh -> the radio button should retain -> 
+		the value attriburte of the radio button should be present in the url
+
+I2 -> 
+	version 6 -> React Router Dom -> 
+	1) Private Routes, authentication, authorization -> (last lecture of react) ->>>> I2 session (important) -> ending lectures -> context api
+	2) v6.4
+		-> API based approach -> I2 -> (important)
+	3) assignemtns related to RRD (very important)
+	4) Mini Project based on filtering 
+
+class componetns -> 
+11:30 -> 
+45 minutes -> class components
+
+
+class fields? 
+
+2022 -> class fields -> 
+
+constructor -> dynamic or static 
+class fields -> static -> (constructor not needed)
+
+class componets
+1) State in class componts are always an object
+2) we cannot use hooks
+3) for state setting we have a function setState that we inherit from the React.Component class
+4)  render() -> we cannot write class based component without this method
+5) A) for functions in class based componetns use arrow functions only, reason will be told later -> this keyword 
+	B) to use bind along with normal functions
+	Disclaimer -> You dont have to do the above steps all the time just to be consistent I am saying to use arrow based funcitons all the time
+6) you only have to pass the state that you are updating in setState function
+
+
+
+arrow function do not have their own this but normal function has
+
+
+1) originally we coulndt use funcitonal components for all the things because of two reasons? 
+	A) state 
+	B)	lifecycle methods
+
+lifecycle methods 
+
+render -> whenever ui has anything to display
+
+mounted -> componentDidMount
+update -> componentDidUpdate
+unmount  -> componentWillUnmount 
+
+
+lifecycle methods -> I2 at the end of react -> not that much relevant
+1) shouldComponentUpdate
+2) getSnapshotBeforeUpdate
+3) getderivedstatefromprops 
+and their are more as well
