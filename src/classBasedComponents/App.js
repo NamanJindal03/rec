@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { FaTimes, FaCircle, FaPen  } from "react-icons/fa";
 
 // export default function App(props) {
 //   const [state, setState] = useState({isClass: true, newState: 'somevalue'});
