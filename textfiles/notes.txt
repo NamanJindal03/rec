@@ -1005,16 +1005,14 @@ search param ->
 
 I2 -> 
 	version 6 -> React Router Dom -> 
+	3) assignemtns related to RRD (very important)
 	1) Private Routes, authentication, authorization -> (last lecture of react) ->>>> I2 session (important) -> ending lectures -> context api
 	2) v6.4
 		-> API based approach -> I2 -> (important)
-	3) assignemtns related to RRD (very important)
+	
 	4) Mini Project based on filtering 
 
 class componetns -> 
-11:30 -> 
-45 minutes -> class components
-
 
 class fields? 
 
@@ -1056,3 +1054,146 @@ lifecycle methods -> I2 at the end of react -> not that much relevant
 2) getSnapshotBeforeUpdate
 3) getderivedstatefromprops 
 and their are more as well
+
+
+should we push node modules to our git?
+
+
+linux commands
+cd 
+cd ..
+touch
+mkdir
+ls
+rm 
+rm -rf
+pwd
+
+npm i react-icons --save 
+
+before npm version 5 ->
+
+if we had to save a package in package.json we explicitely had to mention --save else it wouldnt save it in the package.json
+
+from version 6 by default all npm i are put in package.json
+
+package.json -> very important ** -> 
+
+
+why we should update packages?
+
+	opensource -> 
+		at the end some developer is developing those
+		their can be certain bugs
+		all the apcakgaes are also getting revamped rapidly
+		all the packages are resolving the issues raised
+
+	1) to prevent from any secuirty flaw
+	2) from abug
+	3) to get the optimzations
+	4) to get the latest syntax
+opensource -> 
+
+
+Next.js is primarliy a frotnend library (react framework) build over react, through which we can also create full stack applications. 
+
+Next.js has both client side rendering as well as server side rendering which totally differentiates it from react 
+
+as next.js is compatible to build a full stack application we have the ability to create API's also. 
+
+
+Why its a react framework?
+
+Our Scope? what are we going to cover in Newton school?
+1) Are we going to cover Server side routing? NO
+2) Are we goint to create a full stack application from next? NO
+3) Client side routing from next js. WHY???
+
+why not react itself?
+because the official documentation says that the best way to utilise react is now by setting up next.js not CRA -> create next app
+
+
+React Routerd dom wont be needed in next applciation 
+is RRD waste?
+NO
+why?
+comapnies work slowly, they havent even shifted to 18 -> next?
+
+
+it has an inbuild router, which is on the basis of the files and folders you create inside the pages folder.
+
+Tomorrow -> more things that we performed with RRD inside next -> 
+
+
+I2 session 2 ->=
+
+
+
+Amazon Seller case study -> authorization and authentication
+
+Admin -> every route
+Finance -> /dashbaord and /finance
+Content Writer -> /product
+Graphic Designer -> /product
+Sales -> /dashboard and /product
+
+Hotstar ->
+
+Premium
+super premium
+authentication 
+
+authenticatd -> i can see all the list but when I click on any movie it would display me buy premium or super premiium
+
+premium -> 
+movie -> super premioum -> dialog box -> 
+
+
+Date: 18th MArhc
+
+Next -> 
+	nested routes
+	dynamic path -> path params -> 
+
+useReducer 
+
+
+/blogs/categories/:categoryId/:blogId
+
+-> blogId and categoryId on the page -> 
+
+
+useReducer and context API -> top level utmost required
+
+useMemo, useCallback, memo() -> more focus towards interview -> very very very very rare usage in the actual projects 
+
+
+
+Tomorrow -> 
+useReducer ->
+	actions and payload->
+	dispatch function ->
+	reducer function ->
+
+counter applicationn -> 
+(-) (reset) (+)
+useState -> 0
+
+
+navigation in 404 in next -> 
+
+
+useReducer vs useState ->
+
+1) useReducer seaprates the business logic from the UI. 
+Which follows one of the most fundamental principle of programming which is called as code distribution, Single Responsibility, separation of control
+
+SOLID principles ->
+S -> single responsibility
+
+2) useReducer is not used for simple states like boolean, integer, it is majorly used for complex object/ nested object, or big objects or a compoent having two many actions
+
+
+next.js -> redirecitng from the not found page 
+
+we need to have a 404.js file where we customize the 404 page and overwrite the default page by the next.js
