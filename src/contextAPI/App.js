@@ -8,7 +8,10 @@ export default function App() {
     const [counter, setCounter] = useState(0)
   return (
     <div>
-        <MyContextStore.Provider value={{counter: counter}}>
+        <MyContextStore.Provider value={{
+            counter: counter,
+            increament: (val) => setCounter(counter+val)
+        }}>
             <Parent1 />
             <Parent2 />
         </MyContextStore.Provider>
