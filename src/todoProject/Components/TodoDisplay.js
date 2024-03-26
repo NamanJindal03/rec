@@ -6,7 +6,12 @@ export default function TodoDisplay({todoList, toggleCompleted,deleteTodo}) {
     <>
         {
             todoList.map((todo)=>{
-                return <TodoItem todo={todo} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo}/>
+                return 
+                <TodoItem 
+                  todo={todo} 
+                  toggleCompleted={toggleCompleted} 
+                  deleteTodo={deleteTodo}
+                />
             })
             
         }
