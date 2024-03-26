@@ -12,5 +12,10 @@ export default function PrivateRoutes() {
         navigate('/login');
     }
 
-  return authData.isLoggedIn ? <Outlet /> : <Navigate to="/login" />
+  return authData.isLoggedIn ? 
+    (<>
+        <div><button onClick={authData.logout}>Logout</button></div>
+        <Outlet /> 
+    </>): 
+    <Navigate to="/login" />
 }
