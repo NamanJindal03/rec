@@ -8,11 +8,17 @@ export default function App() {
     console.log(ref2.current);
     ref1.current = 10;
     ref2.current=20;
+
+    function updateRefs(){
+        ref1.current = 'I got changed';
+        ref2.current= 'Even I got changed';
+    }
   return (
     <>
     
         <div>App</div>
-        <button onClick={()=>setState(state+1)}></button>
+        <button onClick={()=>setState(state+1)}>update state</button>
+        <button onClick={updateRefs}>update refs</button>
     </>
   )
 }
