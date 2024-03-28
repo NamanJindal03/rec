@@ -20,7 +20,7 @@ import ReactDOM from 'react-dom/client';
 // import App from './propChange/App'
 // import App from './classContext/App'
 
-import App from './useRef/App'
+import App from './useRef/App2'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
