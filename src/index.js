@@ -23,7 +23,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './useRef/App2'
 // import App from './sampleTest/App'
 // import App from './forwardRef/App'
-import App from './optimizations/App'
+// import App from './optimizations/App'
+import App from './optimization2/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
