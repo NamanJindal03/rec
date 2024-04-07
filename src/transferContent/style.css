@@ -1,0 +1,18 @@
+.flex{
+    display: flex;
+}
+.transferContainer{
+    gap: 15px;
+}
+.listBox{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 100px;
+    height: inherit;
+}
+.controlBox{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
