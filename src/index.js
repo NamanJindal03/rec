@@ -27,7 +27,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './optimization2/App'
 // import App from './transferContent/App'
 // import App from './usetoggleApplication/App'
-import App from './useLocalStorageApplication/App'
+// import App from './useLocalStorageApplication/App'/*  */
+import App from './todoUseLocalStorage/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
