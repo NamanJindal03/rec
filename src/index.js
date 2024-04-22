@@ -29,7 +29,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './usetoggleApplication/App'
 // import App from './useLocalStorageApplication/App'/*  */
 // import App from './todoUseLocalStorage/App'
-import App from './useDebounceApplication/App'
+// import App from './useDebounceApplication/App'
+import App from './lazyloading/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
