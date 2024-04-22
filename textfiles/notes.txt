@@ -1197,3 +1197,146 @@ S -> single responsibility
 next.js -> redirecitng from the not found page 
 
 we need to have a 404.js file where we customize the 404 page and overwrite the default page by the next.js
+
+
+context API -> React 16 -> is a state store solution made by the react team. 
+before context API redux was very heavily used which wasnt developed by react. 
+
+Important terminoligies in context api ->
+
+1) state store -> 
+2) provider
+3) consumer 
+
+
+Code Level ->
+1) Define the store -> React.createContext() ->
+2) Each store provides me an isolated provider and consumer which are linked with that store
+
+Two ways to handle the consumer ->
+
+1) old syntax (difficult syntax) -> wrappers -> callback function wrapper
+
+2) new syntax (easy syntax) -> hook -> useContext() 
+
+
+
+Homework ->
+1) code provider in the app.js
+2) code provider as a seaprate compoent
+3) code provider within the context 
+4) use consumer within the component files
+5) use consumer within the context file itself 
+
+23rd March
+1) Project
+2) Postman
+3) Assignments
+
+
+
+infinite scroll vs pagination ->
+heavy data is involved -> 
+burder BE -> a lot of data together. 
+
+Tuesday ->
+1) context api -> protected route example ->  H/w revise context and procted route
+
+context -> 
+1) ThemeContext -> 
+2) Context APi and its cons
+3) Context and Class components
+4) 1 Assignemnt
+5) Refs 
+
+/* 
+  1) If context api is used unnecessairlyu it cna create a lot of issue becuase our entire heirarychy who the context is wrapping would be rerendered
+  2) carefully deciding what all components your context is wrapping 
+*/
+
+ThemeContext -> Class components -> 
+
+useRef -> 
+
+
+portals
+
+
+disadvantages of JSX
+1) we can only use expressions
+2) a little complicated syntax in comparsion to html and js because they are mixed syntax. 
+3) there is a compulsory requirement of babel to transpile the code to a browser supported code. 
+4) more stricter syntax
+5) problems during debugging
+6) not proper attachement with debugging tools
+
+advantage of refs over normal usage
+1) react knows what is getting updated in the dom
+2) React does certain optimization and react is in control of the useRef hence it reacts itself with the react lifecycle for instance at the time of unmounting react empties the refs value to null
+3) refs can be used in mobile platforms as well where we don't have document.querySelector etc. so refs is basically platform agnostic. 
+
+
+useRef usecases -> 
+1) focus and unfocus events
+2) storing the timer id -> setInterval, setTimeout
+3) scroll -> infinity scroll -> useRef -> infinity scroll 
+
+forwardRef and createRef -> 
+
+
+Next.js -> Monday and Tuesday 
+
+
+if you want to use import syntax -> but your particular file isnt configures with any bundler then you need a .mjs syntax.
+
+If you are not using .mjs syntax then you will need to use the default file mechanism which is called common module system (Es5 file system) which has the keyword called as require
+
+
+similarity in app router and pages router
+
+
+1) app router is more optimized for caching
+
+/products/laptop -> 
+
+pages router?? ->
+
+products folder -> laptop folder -> index.js
+products folder -> laptop.js
+
+/about
+about.js
+about folder -> index.js
+
+
+shimmer -> replacement of loading 
+
+colocation -> when you are able to place you extra files within that routing. utils, constants. (I2)
+
+forwardRef -> 
+
+useRef ->
+
+
+React 19 -> 15-20 days 
+optimisations -> they are handled by the react team itself ->
+useMemo, 
+memo
+useCallback 
+
+
+
+JS ->
+chess board 
+tic tac toe
+kanban board
+modal 
+color picker
+snake and ladder
+star rating 
+a lot more -> 
+
+React -> 
+Transfer List
+
+useDebounce => 
